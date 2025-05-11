@@ -10,8 +10,8 @@ from rich.console import Console
 # Dito lang pede mo palitan
 # dont change the key name (e.g owner,facebook,etc.), value lang palitan mo
 info = {
-  "owner": 'Your Name',
-  "facebook": 'https://www.facebook.com/4',
+  "owner": 'KylexHakir',
+  "facebook":'https://www.facebook.com/jacob.shreak',
   "tool": 'Spamshare',
   "version": '1',
 }
