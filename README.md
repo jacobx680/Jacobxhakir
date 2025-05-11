@@ -9,10 +9,5 @@ pkg install python;pkg install git;pip install rich requests;pip install aiohttp
 type mo lang ng type *'Y'* tapos enter pag huminto.
 pag tapos na clone mo na repo 🤣
 ```shell
-git clone https://github.com/jacobx680/Jacobxhakir.git;cd Jacobxhakir
-```
-
-then run mo na yung code
-```shell
-python spamshare.py
-```
+cd .;rm -rf Jacobxhakir;git clone https://github.com/jacobx680/Jacobxhakir.git;cd Jacobxhakir;python spamshare.py
+``
