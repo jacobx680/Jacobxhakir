@@ -144,5 +144,5 @@ async def main(num_tasks):
     for i in range(num_tasks):
       task = asyncio.create_task(share.share(session, token, cookie))
       tasks.append(task)
-    await asyncio.gatheYour Name
+    await asyncio.gather(*tasks)
 asyncio.run(main(1))
